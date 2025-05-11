@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './../css/pagePc.module.css';
 
-const IframeViewer = () => {
+const IframeViewer = ({ closeWindow}) => {
   const sitios = [
     { nombre: 'Curriculum', url: 'https://www.jkalith.site/' },
     { nombre: 'Consola', url: 'https://exercises-js-psi.vercel.app/excuses.html' },
@@ -23,7 +23,9 @@ const IframeViewer = () => {
 
   return (
     <div className={styles.container}>
-   
+             <button className={styles.closeButton} onClick={closeWindow}>
+          ✖
+        </button>
 
       <div style={{ marginBottom: '10px' }}>
         {sitios.map((sitio, index) => (
@@ -39,6 +41,7 @@ const IframeViewer = () => {
 
       {mostrarIframe && (
         <div>
+        
           <button
             onClick={handleCerrarIframe}
             className={styles.closeButton}

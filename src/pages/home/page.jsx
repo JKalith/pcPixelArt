@@ -3,7 +3,7 @@ import styles from "../../css/home.module.css";
 import globals from "../../css/globals.module.css";
 import FloatingWindow from "../../components/floatDiv";
 import Clock from "../../api/clock";
-import PagePc from "../../components/pagePc"
+import Browser from "../../components/browser"
 import Calculator from "../../components/calculator";
 function Home() {
   const screenRef = useRef(null); // Ref para el contenedor que contiene la ventana
@@ -25,7 +25,7 @@ function Home() {
           <div className={styles.innerFrameMonitor}>
             <div ref={screenRef} className={styles.screenContainer}>
               
-              <PagePc/>
+              <Browser/>
          
       <Clock/>
 
@@ -40,9 +40,13 @@ function Home() {
               <button className={styles.buttomOn} onClick={openCalculator}>
                 Open Calculator
               </button>
+
+
               {calcIsVisible && (
                 <Calculator closeCalculator={closeCalculator} />
               )}
+
+
               <button className={styles.buttomOn} onClick={openWindow}>
                 Open Window
               </button>
