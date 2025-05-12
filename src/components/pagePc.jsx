@@ -23,11 +23,13 @@ const IframeViewer = ({ closeWindow}) => {
 
   return (
     <div className={styles.container}>
-             <button className={styles.closeButton} onClick={closeWindow}>
-          ✖
-        </button>
 
-      <div style={{ marginBottom: '10px' }}>
+
+      <div className={styles.flexContainer}>
+        
+    
+        
+        <div style={{ marginBottom: '0px' }}>
         {sitios.map((sitio, index) => (
           <button
             key={index}
@@ -38,16 +40,18 @@ const IframeViewer = ({ closeWindow}) => {
           </button>
         ))}
       </div>
+      <button className={styles.closeButton} onClick={closeWindow}>
+          ✖
+        </button>
+          </div>
+        
+
+    
 
       {mostrarIframe && (
         <div>
         
-          <button
-            onClick={handleCerrarIframe}
-            className={styles.closeButton}
-          >
-            Cerrar sitio
-          </button>
+        
 
           <div className={styles.iframeContainer}>
             <iframe

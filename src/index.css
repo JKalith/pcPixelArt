@@ -18,8 +18,10 @@ code {
 }
 button{
   cursor: url('../public//cursor.png'), auto;
-
-
+  font-family: 'Silkscreen', monospace, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+width: auto;
  cursor: url('../public/hand.png'), pointer;
 
 
@@ -29,6 +31,14 @@ div{
 
 
 
+
+
+
+
+}
+iframe{
+
+  cursor: url('../public//cursor.png'), auto;
 
 
 
