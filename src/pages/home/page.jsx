@@ -3,7 +3,7 @@ import styles from "../../css/home.module.css";
 import globals from "../../css/globals.module.css";
 import FloatingWindow from "../../components/floatDiv";
 import Clock from "../../api/clock";
-import Browser from "../../components/browser"
+import Browser from "../../components/browser";
 import Calculator from "../../components/calculator";
 function Home() {
   const screenRef = useRef(null); // Ref para el contenedor que contiene la ventana
@@ -24,32 +24,23 @@ function Home() {
         <div className={styles.frameMonitor}>
           <div className={styles.innerFrameMonitor}>
             <div ref={screenRef} className={styles.screenContainer}>
-              
-              <Browser/>
-         
-      <Clock/>
+              <Browser />
 
+              <Clock />
 
+       
+       <div className={styles.navbar}>
+                <button className={styles.buttomOn} onClick={openCalculator}>
+                  Open Calculator
+                </button>
 
-
-
-
-
-
-
-              <button className={styles.buttomOn} onClick={openCalculator}>
-                Open Calculator
-              </button>
-
-
+                <button className={styles.buttomOn} onClick={openWindow}>
+                  Open Window
+                </button>
+              </div>
               {calcIsVisible && (
                 <Calculator closeCalculator={closeCalculator} />
               )}
-
-
-              <button className={styles.buttomOn} onClick={openWindow}>
-                Open Window
-              </button>
 
               {isVisible && (
                 <FloatingWindow
@@ -58,7 +49,9 @@ function Home() {
                 />
               )}
             </div>
+            
           </div>
+          
           <div className={styles.frameButtomMonitor}>
             <button className={styles.buttomOn}></button>
           </div>

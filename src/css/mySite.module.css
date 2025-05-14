@@ -1,0 +1,52 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .bio {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .videos {
+    margin-top: 2rem;
+  }
+
+  .videos ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .videos li {
+    margin-bottom: 1rem;
+  }
+
+  .videos a {
+    
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .videos a:hover {
+    text-decoration: underline;
+  }

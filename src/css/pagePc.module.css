@@ -1,9 +1,15 @@
 .container {
 
-  background-color: rgb(56, 92, 168)  ;
-display: absolute;
-height: 41vw;
-width: 100%;
+
+
+    background-color: #373069;
+      position: absolute;
+  width: 100%;
+    z-index: 20;
+height: 100%;
+  border: none;
+  left: 0;
+  top: 1;
 }
 .flexContainer{
 display: flex;

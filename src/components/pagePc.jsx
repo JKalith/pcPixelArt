@@ -51,14 +51,21 @@ const IframeViewer = ({ closeWindow}) => {
       {mostrarIframe && (
         <div>
         
-        
+      
 
           <div className={styles.iframeContainer}>
+            
             <iframe
               src={urlActual}
               className={styles.iframe}
               title="Visor de sitios"
-            ></iframe>
+            >
+
+
+
+
+            </iframe>
+       
           </div>
         </div>
       )}

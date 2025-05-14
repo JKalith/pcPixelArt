@@ -1,15 +1,22 @@
 .frameMonitor{
     border: solid 5px black;
     width: 65vw;
-    height: 72vh;
+    height: 80vh;
 background-color: #87c06d;
 display: flex;
 border-radius: 5px;
 flex-direction: column;
-padding: 7vw 5vw;
+padding: 3vw 6vw;
 
 align-items: center;
 justify-content: center;
+}
+
+.navbar{
+position: absolute;
+bottom: 0;
+margin: 5px;
+z-index: 0;
 }
 .clockTime{
  position: absolute;
@@ -24,7 +31,7 @@ justify-content: center;
 .innerFrameMonitor{
 border: solid 5px black;
 width: 65vw;
-height: 77vh;
+height: 100vh;
 padding: 2vw;
     background: repeating-linear-gradient(135deg, #5c5c5c 0, #446931 2px, transparent 1px, transparent 4px);
 
@@ -35,8 +42,8 @@ padding: 2vw;
     }
 .screenContainer{
 border: solid black 5px;
-width: 65vw;
-height: 80vh;
+width: 100%;
+height: 100%;
 
  
   position: relative; /* Esto es clave */
@@ -49,7 +56,7 @@ height: 80vh;
 
 
 
-    background-color: #30694f;
+    background-color: #323069;
 
     border-radius: 5px;
 }
