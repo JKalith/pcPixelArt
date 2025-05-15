@@ -22,10 +22,39 @@ button{
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 width: auto;
+
+
+color: white;
+
+box-shadow: 2px 2px 0 2px  #223618 ;
+background-color: #1c5c32;
+border-radius: 5px;
+border: 2px solid #223e2a;
+padding: 5px;
+
+
+
+
+
  cursor: url('../public/hand.png'), pointer;
 
 
-}
+
+
+
+
+
+&:active{
+
+    box-shadow: inset -2px -2px 0 -2px  #223618 ;
+
+
+}}
+
+
+
+
+
 div{
   cursor: url('../public//cursor.png'), auto;
 
