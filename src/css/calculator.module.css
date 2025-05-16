@@ -1,7 +1,107 @@
-.allScreen{
-width: 1000px;
-height: 100%;
-background-color: rgb(0, 75, 225);
-z-index: 100;
-position: absolute;
+.calculator {
+  background-color: #1a1a2e;
+  color: #fff;
+  border: solid 2px black;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 320px;
+  padding-top: 60px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+height: 30px;
+width: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+ padding: 16px;
+  box-shadow: 2px 2px 0 2px #6e1313;
+  color: white;
+    transition: transform 0.3s ease;
+  font-size: auto;
+  border: solid 1px black;
+   cursor: url('../../public/hand.png'), pointer;
+   
+  cursor: pointer;
+  &:active{
+       cursor: url('../../public/hand.png'), pointer;
+  box-shadow: inset -2px -2px 0 -2px #972727;
+
+  transform: scale(0.99);
+  }
+
+}
+.closeButton, .button{
+   cursor: url('../../public/hand.png'), pointer;
+
+}
+
+.display {
+  font-size: 2rem;
+  background-color: #0f3460;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  word-wrap: break-word;
+  min-height: 50px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  padding: 20px;
+  font-size: 1.2rem;
+    cursor: url('../../public/hand.png'), pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #1c3781;
+   box-shadow: 2px 2px 0 2px #192e69;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #0f3460;
+    cursor: url('../../public/hand.png'), pointer;
+}
+
+.clear {
+  grid-column: span 4;
+  background-color: #e94560;
+     box-shadow: 2px 2px 0 2px #6f2431;
+}
+
+.clear:hover {
+  background-color: #ff3c26ab;
+   
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .button {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
+  .display {
+    font-size: 1.5rem;
+  }
 }

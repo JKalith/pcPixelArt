@@ -1,34 +1,43 @@
+import styles from "../css/calculator.module.css";
+import React, { useState } from "react";
 
-    import styles from "../css/calculator.module.css";
-    import React, { useState, useRef, useEffect, useMemo } from "react";
-function Calculator({ closeCalculator }) {
+export default function Calculator({ closeCalculator }) {
+  const [input, setInput] = useState("");
 
-  const [txt, setTxt] = useState("Algo de texto");
+  const handleClick = (value) => {
+    setInput((prev) => prev + value);
+  };
 
-  const [a, setA] = useState(0);
-  const [b, setB] = useState(0);
+  const clear = () => setInput("");
+  const calculate = () => {
+    try {
+      // Reemplazar símbolos para que JS los entienda
+      const result = eval(input.replace(/×/g, "*").replace(/÷/g, "/"));
+      setInput(result.toString());
+    } catch {
+      setInput("Error");
+    }
+  };
 
-  const sum = useMemo(() => {
-    console.log('Calculando suma...');
-    return a + b;
-  }, [a, b]);
-  
   return (
-    <div className={styles.allScreen}>
-      
-      <p>Texto: {txt}</p>
-      <p>a: {a}</p>
-        <button className={styles.closeButton} onClick={closeCalculator}>
-          ✖
-        </button>
-        
-      <p>b: {b}</p>
-      <p>sum: {sum}</p>
-      <button onClick={() => setTxt("Nuevo Texto!")}>Escribir Texto</button>
-      <button onClick={() => setA(a + 1)}>Incrementar a</button>
-      <button onClick={() => setB(b + 1)}>Incrementar b</button>
+    <div className={styles.calculator}>
+      <button className={styles.closeButton} onClick={closeCalculator}>✖</button>
+      <div className={styles.display}>{input || "0"}</div>
+      <div className={styles.keypad}>
+        {["7", "8", "9", "÷", "4", "5", "6", "×", "1", "2", "3", "-", "0", ".", "=", "+"].map((btn) => (
+          <button
+            key={btn}
+            className={styles.button}
+            onClick={() => {
+              if (btn === "=") calculate();
+              else handleClick(btn);
+            }}
+          >
+            {btn}
+          </button>
+        ))}
+        <button className={`${styles.button} ${styles.clear}`} onClick={clear}>C</button>
+      </div>
     </div>
   );
 }
-
-export default Calculator;

@@ -28,11 +28,13 @@ button {
   border-radius: 5px;
   border: 2px solid #223e2a;
   padding: 5px;
+    transition: transform 0.3s ease;
   cursor: url('../public/hand.png'), pointer;
 }
 
 button:active {
   box-shadow: inset -2px -2px 0 -2px #223618;
+    transform: scale(0.99);
 }
 
 div {
