@@ -1,10 +1,23 @@
-.clockTime{
- position: absolute;
- top: 0;
- right: 0;
+.clockTime {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: #fff;
-background-color: rgb(66, 31, 144);
-width: 100%;
-display: flex;
-justify-content: right;
+  background-color: rgb(66, 31, 144);
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  font-size: 20px; /* Tamaño base */
+}
+
+@media (max-width: 768px) {
+  .clockTime {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clockTime {
+    font-size: 10px;
+  }
 }
